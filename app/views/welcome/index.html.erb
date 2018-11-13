@@ -1,0 +1,10 @@
+<h1>Welcome#index</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<% if session[:user].present? %>
+  <p>Hello, <%= session[:user] %></p>
+  <p><%= link_to 'Sign out', :sign_out, method: :delete %></p>
+  <p class="js-time"></p>
+<% else %>
+  <p><%= link_to 'Sign in', :sign_in, method: :post %></p>
+<% end %>
